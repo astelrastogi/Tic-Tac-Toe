@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+  <fragment
+      android:id="@+id/loginFragment"
+      android:name="androidsamples.java.tictactoe.LoginFragment"
+      android:label="@string/login_fragment_label"
+      tools:layout="@layout/fragment_login">
+    <action
+        android:id="@+id/action_login_successful"
+        app:destination="@id/dashboardFragment" />
+  </fragment>
+  <fragment
+      android:id="@+id/gameFragment"
+      android:name="androidsamples.java.tictactoe.GameFragment"
+      android:label="@string/game_fragment_label"
+      tools:layout="@layout/fragment_game">
+    <argument
+        android:name="gameType"
+        app:argType="string" />
+    <argument
+        android:name="gameID"
+        app:argType="string" />
+  </fragment>
+  <fragment
+      android:id="@+id/dashboardFragment"
+      android:name="androidsamples.java.tictactoe.DashboardFragment"
+      android:label="@string/app_name"
+      tools:layout="@layout/fragment_dashboard">
+    <action
+        android:id="@+id/action_need_auth"
+        app:destination="@id/loginFragment" />
+    <action
+        android:id="@+id/action_game"
+        app:destination="@id/gameFragment" />
+  </fragment>
+</navigation>

@@ -1,0 +1,37 @@
+<resources>
+  <string name="app_name">Tic Tac Toe</string>
+  <string name="placeholder">Placeholder</string>
+
+  <string name="login_fragment_label">Login</string>
+  <string name="game_fragment_label">Tic Tac Toe: Game</string>
+  <string name="dashboard_fragment_label">Tic Tac Toe: Dashboard</string>
+
+  <string name="login">Register or Log In</string>
+  <string name="logout">Log Out</string>
+
+  <string name="new_game">New Game</string>
+  <string name="email">Email</string>
+  <string name="password">Password</string>
+
+  <string name="blank"> </string>
+
+  <string name="new_game_dialog_message">Which type of game do you want to create?</string>
+  <string name="forfeit_game_dialog_message">Are you sure you want to forfeit this game?</string>
+
+  <string name="two_player">Two-Player</string>
+  <string name="one_player">One-Player</string>
+
+  <string name="yes">Yes</string>
+  <string name="cancel">Cancel</string>
+  <string name="confirm">Confirm</string>
+  <string name="cross">X</string>
+  <string name="computer">Computer</string>
+  <string name="waiting">Waiting...</string>
+  <string name="status_started">STARTED</string>
+  <string name="status_waiting">WAITING</string>
+  <string name="undecided">UNDECIDED</string>
+  <string name="status_finished">FINISHED</string>
+  <string name="draw">Draw</string>
+  <string name="game_over">Game Over</string>
+  <string name="cell">Cell</string>
+</resources>
