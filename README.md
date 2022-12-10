@@ -1,36 +1,19 @@
 # Tic Tac Toe
 
-This is a starter code for the Tic Tac Toe multiplayer game app assignment.
+# Description 
+This is the code for the Tic Tac Toe multiplayer game android app. A user can play with the app logic as a single player or with another user. Any user is created using authentication by email and password. For each user, there's a count of wins and losses and available open games. 
 
 It uses Android Navigation Component, with a single activity and three fragments:
 
-- The DashboardFragment is the home screen. If a user is not logged in, it should navigate to the
-LoginFragment. (See the TODO comment in code.)
+- The DashboardFragment is the home screen. If a user is not logged in, it will navigate to the LoginFragment. 
 
-- The floating button in the dashboard creates a dialog that asks which type of game to create and
-passes that information to the GameFragment (using SafeArgs).
+- The floating button in the dashboard creates a dialog that asks which type of game to create and passes that information to the GameFragment (using SafeArgs).
 
-- The GameFragment UI has a 3x3 grid of buttons. They are initialized in the starter code.
-Appropriate listeners and game play logic needs to be provided.
+- Appropriate listeners and game play logic are added in GameFragment
 
-- Pressing the back button in the GameFragment opens a dialog that confirms if the user wants to
-forfeit the game. (See the FIXME comment in code.)
+- Pressing the back button in the GameFragment opens a dialog that confirms if the user wants to forfeit the game. 
 
-- A "log out" action bar menu is shown on both the dashboard and the game fragments. Clicking it
-should log the user out and show the LoginFragment. This click is handled in the MainActivity.
-
-# A.a - Details
-Name - Aastha Rastogi
-
-Project - Tic Tac Toe (A5)
-
-BITS ID - 2019A7PS0175G
-
-Email - f20190175@goa.bits-pilani.ac.in
-
-# A.b - Description
-
-This is a multiplayer tic tac toe game, where a user can play with the app logic as a single player or with another user. Any user is created using authentication by email and password. For each user, there's a count of wins and losses and available open games.
+- A "log out" action bar menu is shown on both the dashboard and the game fragments. Clicking it should log the user out and show the LoginFragment. This click is handled in the MainActivity.
 
 ## Known Bugs
 - For player 2, there's no warning for waiting for their turn when it's not their turn
@@ -41,9 +24,8 @@ This is a multiplayer tic tac toe game, where a user can play with the app logic
 <img width="252" alt="WhatsApp Image 2022-12-08 at 20 29 55 (1)" src="https://user-images.githubusercontent.com/54110949/206480229-b7aadcd6-1704-4a47-be12-d223c00518fd.jpeg"> <img width="252" alt="WhatsApp Image 2022-12-09 at 17 26 48" src="https://user-images.githubusercontent.com/54110949/206698162-c99f8f5e-227b-4ff4-822e-16085bdd41c8.jpeg"> <img width="252" alt="WhatsApp Image 2022-12-08 at 20 29 55 (3)" src="https://user-images.githubusercontent.com/54110949/206480239-5cd17e6c-04cd-437c-8c0e-9d8a23cb1f9d.jpeg"> <img width="252" alt="WhatsApp Image 2022-12-08 at 20 29 55" src="https://user-images.githubusercontent.com/54110949/206480241-aef79886-d669-4ee6-9205-9c2cae33993f.jpeg"> <img width="252" alt="WhatsApp Image 2022-12-08 at 20 29 56 (1)" src="https://user-images.githubusercontent.com/54110949/206480243-352d7de8-f7a2-4d0c-8e1d-459152e9ff93.jpeg"> <img width="252" alt="WhatsApp Image 2022-12-08 at 20 29 56" src="https://user-images.githubusercontent.com/54110949/206480245-037f5077-2422-4b49-be89-bf7fc9986680.jpeg"> <img width="252" alt="WhatsApp Image 2022-12-08 at 20 29 57 (1)" src="https://user-images.githubusercontent.com/54110949/206480249-300a5ee4-fffc-4384-a1a2-5596f0366e05.jpeg"> <img width="252" alt="WhatsApp Image 2022-12-08 at 20 29 57" src="https://user-images.githubusercontent.com/54110949/206480254-f321b4ea-5cd5-49ca-8ba5-be945202908b.jpeg"> <img width="252" alt="Screenshot 2022-12-08 at 8 27 35 PM" src="https://user-images.githubusercontent.com/54110949/206480282-49ab872e-84f8-41fd-a9ef-7c9527ccfe82.png"> <img width="238" alt="Screenshot 2022-12-08 at 8 28 10 PM" src="https://user-images.githubusercontent.com/54110949/206480291-c08b18d8-2753-47d1-8560-d7ee460dc9ab.png"> <img width="302" alt="Screenshot 2022-12-08 at 8 28 19 PM" src="https://user-images.githubusercontent.com/54110949/206480292-ccab06cc-c531-4a34-8239-745b667b64a4.png"> <img width="259" alt="Screenshot 2022-12-08 at 8 30 00 PM" src="https://user-images.githubusercontent.com/54110949/206480296-a66826f6-676a-4367-99d8-3b424318f960.png"> <img width="244" alt="Screenshot 2022-12-09 at 5 27 43 PM" src="https://user-images.githubusercontent.com/54110949/206697642-2b73ccbe-094c-458b-8996-306c7d68967f.png"> <img width="244" alt="Screenshot 2022-12-08 at 8 30 27 PM" src="https://user-images.githubusercontent.com/54110949/206480311-4edf5fab-3c8c-42b7-baae-e403ccdd5379.png">
 
 
-# A.c - How I completed Tasks
+# How I completed Tasks
 
-## Task1
 - To make the signin/register user page as the initial fragment, I changed the start destination to `loginFragment` in `nav_graph.xml` :  
 ```
     app:startDestination="@id/loginFragment">
@@ -62,7 +44,6 @@ In `onCreate()`, a FirebaseAuth instance is created:
     mNavController.navigate(R.id.loginFragment);
 ```
 
-## Task2
 
 - In `LoginFragment.java`, a new user is added to database on sign up:
 ```
@@ -89,7 +70,6 @@ In `onCreate()`, a FirebaseAuth instance is created:
 - In `GameFragment.java`, the player plays against the computer i.e. the app logic, where the computer sets the next available button on tictactoe as "O".
 - On winning, the number of wins and losses are updated in the database the dashboard for the user. 
 
-## Task 3
 - Game uuid is also stored in the database, and it is fetched through safe args : 
 ```
     gameUUID = args.getGameID();
@@ -145,11 +125,11 @@ In `onCreate()`, a FirebaseAuth instance is created:
 - The game model stores gameID, isOpen, player1ID, player2ID, isSinglePlayer, status, board's status, whose turn, and who won
 - The user model stores userID, wins, losses and their email (for displaying "Welcome, <email>")
 
-# A.d - How to run/host app
+# How to run/host app
 
 Install the app via running the app directly through Android Studio. Authentication and database hosted through Firebase. 
 
-# A.e - Testing and Accessibility
+# Testing and Accessibility
 ## Testing
 
 - Manually tested by different users. 
@@ -165,10 +145,15 @@ It was fairly smooth to navigate througout the application, where the assitant t
 ## Accessibilty
 It gives suggestions like `Multiple Descriptions`, `Text contrast` for "OK", "ONE-PLAYER" in dialog box, `Image contrast` for + button, 
 ![WhatsApp Image 2022-12-08 at 21 13 33](https://user-images.githubusercontent.com/54110949/206491382-52795baf-5fd6-4c39-a79b-1a9b75cf25a4.jpeg) ![WhatsApp Image 2022-12-08 at 21 13 35](https://user-images.githubusercontent.com/54110949/206491394-3d797bdb-c73d-4f7e-a37e-56c8b3cb2879.jpeg) ![WhatsApp Image 2022-12-08 at 21 13 30](https://user-images.githubusercontent.com/54110949/206491365-f430cbf6-73a6-491f-a62b-aa6ffc719515.jpeg)
-# A.f - Hours taken
 
-Took around 48 hours to complete this assignment. 
+# Technologies useed 
+<div align="center">
+  <a href="https://github-readme-tech-stack.vercel.app/api/cards?theme=github_dark&lineCount=2&line1=node.js,node.js,0;typescript,typescript,0;express,express,0&line2=html5,html,0;react,react,0;tailwindcss,tailwind,0&title=This%20Project%27s%20Tech%20Stack">
+    <img  src="https://github-readme-tech-stack.vercel.app/api/cards?theme=github_dark&lineCount=2&line1=node.js,node.js,0;typescript,typescript,0;express,express,0&line2=html5,html,0;react,react,0;tailwindcss,tailwind,0&title=This%20Project%27s%20Tech%20Stack" title="Tech Stack">
+  </a>
+</div>
+# Hours taken
 
-# A.g - Assignment Difficulty
+Took around 48 hours to complete this project. 
 
-10, on the scale of 1-10, where 10 is the highest difficulty. 
+
