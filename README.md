@@ -1,4 +1,10 @@
 # Tic Tac Toe
+<div align="center">
+  <a href="https://github-readme-tech-stack.vercel.app/api/cards?theme=github_dark&line1=java,java,0;firebase,firebase,0;androidstudio,anddroidstudio,0,title=This%20Project%27s%20Tech%20Stack">
+    <img  src="https://github-readme-tech-stack.vercel.app/api/cards?theme=github_dark&line1=java,java,0;firebase,firebase,0;androidstudio,androidstudio,0&title=This%20Project%27s%20Tech%20Stack">
+  </a>
+</div>
+
 
 # Description 
 This is the code for the Tic Tac Toe multiplayer game android app. A user can play with the app logic as a single player or with another user. Any user is created using authentication by email and password. For each user, there's a count of wins and losses and available open games. 
@@ -146,12 +152,6 @@ It was fairly smooth to navigate througout the application, where the assitant t
 It gives suggestions like `Multiple Descriptions`, `Text contrast` for "OK", "ONE-PLAYER" in dialog box, `Image contrast` for + button, 
 ![WhatsApp Image 2022-12-08 at 21 13 33](https://user-images.githubusercontent.com/54110949/206491382-52795baf-5fd6-4c39-a79b-1a9b75cf25a4.jpeg) ![WhatsApp Image 2022-12-08 at 21 13 35](https://user-images.githubusercontent.com/54110949/206491394-3d797bdb-c73d-4f7e-a37e-56c8b3cb2879.jpeg) ![WhatsApp Image 2022-12-08 at 21 13 30](https://user-images.githubusercontent.com/54110949/206491365-f430cbf6-73a6-491f-a62b-aa6ffc719515.jpeg)
 
-# Technologies useed 
-<div align="center">
-  <a href="https://github-readme-tech-stack.vercel.app/api/cards?theme=github_dark&lineCount=2&line1=node.js,node.js,0;typescript,typescript,0;express,express,0&line2=html5,html,0;react,react,0;tailwindcss,tailwind,0&title=This%20Project%27s%20Tech%20Stack">
-    <img  src="https://github-readme-tech-stack.vercel.app/api/cards?theme=github_dark&lineCount=2&line1=node.js,node.js,0;typescript,typescript,0;express,express,0&line2=html5,html,0;react,react,0;tailwindcss,tailwind,0&title=This%20Project%27s%20Tech%20Stack" title="Tech Stack">
-  </a>
-</div>
 # Hours taken
 
 Took around 48 hours to complete this project. 
